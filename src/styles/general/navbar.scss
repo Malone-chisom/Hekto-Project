@@ -1,0 +1,179 @@
+.container {}
+
+.padding-horizontal {
+    padding: 0 240px;
+}
+
+.padding-vertical {
+    // border: 1px solid red;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar-top-box {
+    background-color: violet;
+    padding: 8px 0;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+
+.text-white {
+    color: white;
+}
+
+.font-normal {
+    font-size: 14px;
+}
+
+
+
+.navbar-top-left {
+    display: flex;
+    // gap: 30px;
+
+    .navbar-top-left-1,
+    .navbar-top-left-2 {
+        display: flex;
+
+
+        div,
+        span {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    .navbar-top-left-2 {
+        margin-left: 35px;
+    }
+}
+
+.navbar-top-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .navbar-top-right-1,
+    .navbar-top-right-2,
+    .navbar-top-right-3 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar-top-right-2 {
+    margin: 0 20px;
+}
+
+.navbar-top-right-child {
+    cursor: pointer;
+}
+
+.navbar-icon {
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-icon-margin-right {
+    margin-right: 7px;
+}
+
+.search-box {
+    position: relative;
+    width: 317px;
+    // height: 36px;
+
+    input {
+        width: 85%;
+        height: 34px;
+        border: 1px solid lightgray;
+        outline: none;
+    }
+}
+
+.navbar-menue-item-left {
+    margin-left: 40px;
+}
+
+.search-box-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    height: 100%;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FB2E86;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-bottom-2 {
+    display: flex;
+}
+
+.navbar-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    // border: 1px solid black;
+
+    .navbar-bottom-left {
+        display: flex;
+
+
+
+        .navbar-bottom-left-2 {
+            display: flex;
+        }
+
+    }
+
+    .navbar-logo {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .navbar-bottom-right {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .padding-horizontal {
+        padding: 0 140px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .padding-horizontal {
+        padding: 0 100px;
+    }
+}
+
+
+@media only screen and (max-width: 770px) {
+    .nav-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .padding-horizontal {
+        padding: 0 30px;
+    }
+}
