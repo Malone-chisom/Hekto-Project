@@ -1,12 +1,10 @@
-.container {}
-
 .padding-horizontal {
     padding: 0 240px;
 }
 
 .padding-vertical {
     // border: 1px solid red;
-    margin-top: 30px;
+    // margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -169,6 +167,7 @@
 @media only screen and (max-width: 770px) {
     .nav-container {
         display: none;
+        border: 1px solid;
     }
 }
 

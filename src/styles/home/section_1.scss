@@ -1,5 +1,4 @@
 .section-1-container {
-    // border: 1px solid green;
     position: relative;
     background-color: #F2F0FF;
 }
@@ -711,12 +710,12 @@
     }
 
     .lamp-size {
-        // width: 60%;
+        width: 80% !important;
 
     }
 
     .section-1-left-lamp {
-        left: -8%;
+        left: -4%;
     }
 
     .section-1-left-content {
@@ -788,8 +787,6 @@
     .section-4-flex {
         flex-wrap: wrap;
         justify-content: center !important;
-
-
 
 
 
@@ -867,6 +864,7 @@
 
             .box-container-text-container {
                 height: 40% !important;
+                font-size: 14px;
                 // text-align: center;
                 // display: flex;
                 // flex-direction: column;
