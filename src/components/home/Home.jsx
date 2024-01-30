@@ -36,7 +36,7 @@ function Home() {
             {/* Navbar ends  */}
 
             {/* Section-1/Hero starts  */}
-            <div className="section-1-container">
+            {/* <div className="section-1-container">
                 <div className="padding-horizontal padding-vertical">
                     <div className="section-1">
                         <div className="section-1-left">
@@ -76,7 +76,7 @@ function Home() {
                 <span className="section-1-left-lamp">
                     <img src={lamp} className="lamp-size" alt="lamp" />
                 </span>
-            </div>
+            </div> */}
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
