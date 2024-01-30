@@ -36,7 +36,7 @@ function Home() {
             {/* Navbar ends  */}
 
             {/* Section-1/Hero starts  */}
-            <div className="section-1-container">
+            {/* <div className="section-1-container">
                 <div className="padding-horizontal padding-vertical">
                     <div className="section-1">
                         <div className="section-1-left">
@@ -63,15 +63,11 @@ function Home() {
                         </div>
                         <div className="section-1-right">
                             <div className="section-1-right-background">
-                                {/* <img src={GroupCicle} className="group-circle" alt="cicle" /> */}
-                                {/* <div className="section-1-right-sofa"> */}
+
                                 <img src={sofaChair} className="sofa" width="100%" alt="chair" />
                                 <div className="group-circle">
                                     <img src={GroupCicle} className="pink-circle" alt="cicle" />
                                 </div>
-
-                                {/*
-                    </div> */}
                             </div>
                         </div>
                     </div>
@@ -80,7 +76,7 @@ function Home() {
                 <span className="section-1-left-lamp">
                     <img src={lamp} className="lamp-size" alt="lamp" />
                 </span>
-            </div>
+            </div> */}
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
