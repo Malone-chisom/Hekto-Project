@@ -73,7 +73,7 @@
 }
 
 .section-1-container {
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
 
@@ -322,7 +322,7 @@
             .section-4-flex-box {
                 width: 23%;
 
-                border: 1px solid #000000;
+                // border: 1px solid #000000;
                 text-align: center;
                 // border: 1px solid red;
                 cursor: pointer;
@@ -373,24 +373,28 @@
     width: 100%;
     // border: 1px solid red;
 
-    .setion-5-left,
-    .section-5-right {
-        width: 50%;
-        // padding: 5px 0;
-        // border: 1px solid green;
-        // font-size: 14px;
-    }
+    .section-5 {
+        padding: 15px 0;
 
-    .section-5-right {
-        display: flex;
-        align-items: center;
-
-        .box-container-for-items-image {
-            border: 1px solid red;
-
-
+        .setion-5-left,
+        .section-5-right {
+            width: 50%;
+            // padding: 5px 0;
+            // border: 1px solid green;
+            // font-size: 14px;
         }
 
+        .section-5-right {
+            display: flex;
+            align-items: center;
+
+            .box-container-for-items-image {
+                // border: 1px solid red;
+
+
+            }
+
+        }
     }
 }
 
@@ -510,8 +514,10 @@
         width: 37%;
         margin-right: 5px;
         height: 180px;
+        padding: 0 10px;
         position: relative;
         box-shadow: 0px 5px 8px #F5F6F8;
+        margin-bottom: 10px;
 
 
         p {
@@ -750,7 +756,7 @@
         justify-content: space-between;
 
         .section-6-sub-1 {
-            width: 46%;
+            width: 100%;
         }
     }
 
@@ -797,7 +803,7 @@
     }
 
     .inner-section-4-flex-box {
-        border: 1px solid pink;
+        // border: 1px solid pink;
         font-size: 14px;
     }
 
@@ -814,13 +820,12 @@
             .section-5-left,
             .section-5-right {
                 width: 100%;
-                border: 1px solid red;
+                // border: 1px solid red;
             }
         }
 
         .smaller-padding-horizontal {
             margin: 0 !important;
-            border: 1px solid black;
         }
     }
 
