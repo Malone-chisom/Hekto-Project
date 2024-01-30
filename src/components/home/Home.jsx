@@ -80,7 +80,7 @@ function Home() {
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
-            {/* <div className="section-2-container">
+            <div className="section-2-container">
                 <div className="padding-horizontal">
                     <div className="section-2">
                         <div className="section-heading">
@@ -161,11 +161,11 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             {/* Section-2/ Ends */}
 
             {/* Section-3 Starts here */}
-            {/* <div className="section-3-container">
+            <div className="section-3-container">
                 <div className="padding-horizontal">
                     <div className="section-3">
                         <div>
@@ -285,13 +285,13 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Section-3 Ends Here */}
 
             {/* section-4 Starts Here */}
 
-            {/* <div className="section-4-container">
+            <div className="section-4-container">
                 <div className="padding-horizontal">
                     <div className="section-4">
                         <div className=" section-heading">
@@ -380,13 +380,13 @@ function Home() {
                     </div>
                 </div>
 
-            </div> */}
+            </div>
 
             {/* section-4 Ends Here */}
 
             {/* section 5 Starts Here */}
 
-            {/* <div className="section-5-container">
+            <div className="section-5-container">
                 <div className="smaller-padding-horizontal">
                     <div className="section-5">
                         <div className="section-5-left">
@@ -421,7 +421,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             {/* sectin 5 ends here */}
 
             {/* section 6 starts here */}
