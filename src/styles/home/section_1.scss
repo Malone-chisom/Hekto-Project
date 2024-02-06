@@ -1,6 +1,8 @@
 .section-1-container {
     position: relative;
     background-color: #F2F0FF;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .section-1-left-lamp {
@@ -15,6 +17,7 @@
 .section-1 {
     // border: 1px solid black;
     display: flex;
+    width: 100%;
 }
 
 .general-font-size {
