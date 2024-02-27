@@ -8,7 +8,7 @@ import homesofan from "../../pictures/home-sofa.png"
 import Ellipse from "../../pictures/Ellipse.png"
 import "../../styles/general/navbar.scss";
 import "../../styles/home/section_1.scss";
-import Navbar from "../general/Navbar";
+// import Navbar from "../general/Navbar";
 import lamp from "../../pictures/image32.png";
 import GroupCicle from "../../pictures/Group-cicle.png";
 import sofaChair from "../../pictures/Shell-Shaped-Armchair-Pink.png";
@@ -26,14 +26,14 @@ import premiumquality from "../../pictures/premium-quality.png";
 import hourssupport from "../../pictures/24-hours-support.png"
 import "../global-Style/Globalstyle.css"
 
+function Home({isHovered, handleMouseLeave, handleMouseEnter}) {
 
-function Home() {
+console.log("isHovered", isHovered)
+console.log("handleMouseLeave", handleMouseLeave )
+
 
     return (
         <div className="home">
-            {/* Navbar starts  */}
-            <Navbar />
-            {/* Navbar ends  */}
 
             {/* Section-1/Hero starts  */}
             <div className="section-1-container">
@@ -55,7 +55,12 @@ function Home() {
                                         nigeria and abroad
                                     </span>
                                 </div>
-                                <button className="section-1-left-btn">
+                                <button className="section-1-left-btn" 
+                            //     onMouseEnter={handleMouseEnter}
+                            //     onMouseLeave={handleMouseLeave}
+                            //    style={{ backgroundColor: isHovered ? "red" : "blue" }}
+                            onClick={() => console.log("Heyyy")}
+                                >
                                     Shop Now
                                 </button>
                             </div>
@@ -74,8 +79,8 @@ function Home() {
 
                 </div>
                 {/* <span className="section-1-left-lamp">
-                    <img src={lamp} className="lamp-size" alt="lamp" />
-                </span> */}
+                <img src={lamp} className="lamp-size" alt="lamp" />
+            </span> */}
             </div>
             {/* Section-1/Hero ends  */}
 
@@ -430,7 +435,7 @@ function Home() {
                 <div className="padding-horizontal">
                     <div className="section-6">
                         <div className="section-6-heading">
-                            <h1 style={{ textAlign: "center" }}>Trending</h1>
+                            <h1 style={{ textAlign: "center", marginBottom: "40px" }}>Trending</h1>
                         </div>
                         <div className="section-6-content">
                             <div className="section-6-img-container">
@@ -521,6 +526,75 @@ function Home() {
                 </div>
             </div>
             {/* Secttion 6 ends here*/}
+
+            {/* footer section */}
+
+            <div className="footer">
+                <div className="padding-horizontal">
+                    <div className="footer-section">
+                        <div className="footer-left">
+                            <h1>
+                                Hekto
+                            </h1>
+
+                            <div className="email-box">
+                                <form action="">
+                                    <input name="Fname" placeholder="Enter Email Address" />
+                                </form>
+                                <div className="signup">
+                                    Sign Up
+                                </div>
+                            </div>
+                            <p>
+                                contact info <br />
+                                17, Princess Road, London Greater London NIV1 Uk
+                            </p>
+                        </div>
+                        <div className="footer-right">
+                            <h4>
+                                Categories
+                            </h4>
+                            <p>
+                                Laptops & Computer
+                            </p>
+                            <p>
+                                Cameras & Photography
+                            </p>
+                            <p>
+                                Smart Phone & Laptop
+                            </p>
+                            <p>
+                                Video Games &
+                            </p>
+                            <p>
+                                Waterproof & Headphones
+                            </p>
+                        </div>
+                        <div className="footer-right">
+                            <h4>
+                                Customer Care
+                            </h4>
+                            <p>My Account</p>
+                            <p>Discount</p>
+                            <p>Returns</p>
+                            <p>Orders History</p>
+                            <p>Order Tracking</p>
+                        </div>
+                        <div className="footer-right">
+                            <h4>
+                                Pages
+                            </h4>
+                            <p>Blog</p>
+                            <p>Browse the Shop</p>
+                            <p>Category</p>
+                            <p>Pre-Built Pages</p>
+                            <p>Viusal Composer Element</p>
+                            <p>WooCommerce Pages</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     )

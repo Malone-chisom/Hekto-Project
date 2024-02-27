@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react"
+
 import {
     BsEnvelope, BsSearch
 } from "react-icons/bs"
@@ -9,16 +11,30 @@ import {
 import {
     CiUser
 } from "react-icons/ci"
-
+import {
+    FaTimes, FaBars
+} from "react-icons/fa"
+import {
+    MdCancel
+} from "react-icons/md"
 import { AiOutlineHeart } from "react-icons/ai";
-import { BsCart } from "react-icons/bs"
+import { BsCart, } from "react-icons/bs"
 import { Link } from "react-router-dom";
 
 
-function Navbar() {
+
+function Navbar({ isNavbarOpened, handleOpenNavbar }) {
+    const navRef = useRef();
+
+    const showNavbar = () => {
+        console.log("navRef.current", navRef.current)
+        navRef.current.classList.toggle('responsive_nav');
+    };
+
 
     return (
         <div className="home container">
+
             <div className="nav-container">
                 <div className="navbar-top-box">
                     <div className="padding-horizontal navbar-top font-normal text-white">
@@ -44,7 +60,13 @@ function Navbar() {
                                 </span>
                             </div>
                         </div>
-                        <div className="navbar-top-right">
+                        <div className="navbar-top-right" ref={navRef}>
+                            <div className="display-small-screen">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Services</a></li>
+                            </div>
                             <div className="navbar-top-right-1">
                                 <div className=" navbar-top-right-child">Login</div>
                                 <span className="navbar-icon">
@@ -64,7 +86,24 @@ function Navbar() {
                                     <BsCart />
                                 </span>
                             </div>
+                            {/* <button className="nav-btn nav-close-btn" onClick={handleOpenNavbar}> */}
+                            {/* <button className="nav-btn nav-close-btn">
+                                <FaTimes />
+                            </button> */}
                         </div>
+                        {/* <div className="navbar-top-right" ref={navRef}>
+                            <NavbarMobile />
+                        </div> */}
+                        {/* <button className="nav-btn" onClick={handleOpenNavbar}> */}
+                        <button className="nav-btn" onClick={() => {
+                            showNavbar()
+                            handleOpenNavbar()
+                        }}> 
+                            {
+                                isNavbarOpened ? <MdCancel /> : <FaBars />
+                            }
+
+                        </button>
                     </div>
                 </div>
                 <div className="padding-horizontal navbar-bottom">
@@ -94,7 +133,7 @@ function Navbar() {
             </div>
 
 
-        </div>
+        </div >
     )
 }
 export default Navbar;

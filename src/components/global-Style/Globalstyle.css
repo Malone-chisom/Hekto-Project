@@ -2,7 +2,9 @@
     box-sizing: border-box;
 } */
 
-
+.home {
+    z-index: 1;
+}
 
 .sub-section-headers {
     margin: 10px 0;

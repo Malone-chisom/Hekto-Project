@@ -8,6 +8,12 @@
     margin-bottom: 30px;
 }
 
+.nav-container {
+    position: sticky;
+    top: 0;
+
+}
+
 .navbar-top-box {
     background-color: violet;
     padding: 8px 0;
@@ -16,10 +22,6 @@
 .navbar-top {
     display: flex;
     justify-content: space-between;
-
-
-
-
 }
 
 .text-white {
@@ -56,8 +58,24 @@
 .navbar-top-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 5px;
+    // justify-content:;
+    
 
+    .display-small-screen li  {       
+        list-style-type: none;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+
+
+    
+    
 
     .navbar-top-right-1,
     .navbar-top-right-2,
@@ -65,7 +83,15 @@
         display: flex;
         align-items: center;
     }
+
+    
 }
+
+ul {
+    list-style-type: none;
+    border: 1px solid white;
+}
+
 
 .navbar-top-right-2 {
     margin: 0 20px;
@@ -151,9 +177,73 @@
     }
 }
 
+.navbar-top-right .nav-btn {
+    border: none;
+    outline: none;
+    padding: 5px;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 14%;
+    font-size: larger;
+    color: white;
+}
+
+.nav-btn {
+    display: none;
+}
+
+// .navbar-top-right {
+//     position: fixed;
+// }
+
+.display-small-screen {
+    display: none;
+}
+
+ 
+
 @media screen and (max-width: 1030px) {
+    .display-small-screen {
+        display: block;
+    }
+
     .padding-horizontal {
         padding: 0 140px;
+    }
+
+
+    .container .nav-btn {
+        display: block;
+        opacity: 1;
+        z-index: 9999999;
+    }
+
+    // .nav-btn {}
+
+    .container .navbar-top-right {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+        background-color: red;
+        transform: translateY(-100vh);
+        z-index: 10;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .container .responsive_nav {
+        transform: none;
+    }
+
+    .navbar-bottom {
+        display: none;
     }
 }
 
@@ -166,8 +256,7 @@
 
 @media only screen and (max-width: 770px) {
     .nav-container {
-        display: none;
-        border: 1px solid;
+        // display: none;
     }
 }
 
