@@ -50,7 +50,7 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                                     Johnsonmalone007@mail.com
                                 </span>
                             </div>
-                            <div className="navbar-top-left-2">
+                            {/* <div className="navbar-top-left-2">
                                 <div className="navbar-icon-margin-right">
                                     <BiPhoneCall />
 
@@ -58,7 +58,7 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                                 <span>
                                     08029915141
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="navbar-top-right" ref={navRef}>
                             <div className="display-small-screen">

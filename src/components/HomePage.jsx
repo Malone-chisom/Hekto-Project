@@ -11,14 +11,14 @@ function HomePage() {
     console.log("isNavbarOpened", isNavbarOpened)
 
     return (
-        <div>
+        <div className="">
 
             {
                 isNavbarOpened ?
 
                     <>
                         <Navbar handleOpenNavbar={handleOpenNavbar} />
-                        {/* <Home /> */}
+                    
                     </> 
                     :
                     <>

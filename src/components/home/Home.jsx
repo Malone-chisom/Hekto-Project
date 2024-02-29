@@ -34,7 +34,6 @@ console.log("handleMouseLeave", handleMouseLeave )
 
     return (
         <div className="home">
-
             {/* Section-1/Hero starts  */}
             <div className="section-1-container">
                 <div className="padding-horizontal padding-vertical">
@@ -44,25 +43,26 @@ console.log("handleMouseLeave", handleMouseLeave )
                                 <div className="section-1-left-content-box-1">
                                     <span className="section-1-left-content-text-1">Best Furniture for your Castle</span>
                                 </div>
-                                <div>
+                                <div  >
                                     <h1 className="section-1-left-content-heading general-font-size">
                                         New Furniture Collection Trends in 2023
                                     </h1>
                                 </div>
-                                <div className="section-1-left-content-box-3">
+                                <div className="section-1-left-content-box-3" >
                                     <span className="section-1-left-content-text-3">
-                                        Award wining brand global brand for Furniture in th world, <br /> we devliver every part of
+                                        Award wining brand global brand for Furniture in th world,  we devliver every part of
                                         nigeria and abroad
                                     </span>
                                 </div>
                                 <button className="section-1-left-btn" 
-                            //     onMouseEnter={handleMouseEnter}
-                            //     onMouseLeave={handleMouseLeave}
-                            //    style={{ backgroundColor: isHovered ? "red" : "blue" }}
-                            onClick={() => console.log("Heyyy")}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                               style={{ backgroundColor: isHovered ? "red" : "#FB2E86" }}
+        
                                 >
                                     Shop Now
                                 </button>
+                                
                             </div>
 
                         </div>
@@ -78,10 +78,11 @@ console.log("handleMouseLeave", handleMouseLeave )
                     </div>
 
                 </div>
-                {/* <span className="section-1-left-lamp">
+              {/* <span className="section-1-left-lamp">
                 <img src={lamp} className="lamp-size" alt="lamp" />
             </span> */}
             </div>
+              
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
@@ -476,6 +477,7 @@ console.log("handleMouseLeave", handleMouseLeave )
                             </div>
                         </div>
                     </div>
+                    
                     {/* section 6 sub */}
                     <div className="section-6-sub">
                         <div className="section-6-sub-1" style={{ backgroundColor: "#FFF6FB" }}>
@@ -522,6 +524,7 @@ console.log("handleMouseLeave", handleMouseLeave )
                             </div>
                         </div>
                     </div>
+
                     {/* section 6 sub */}
                 </div>
             </div>
@@ -529,7 +532,7 @@ console.log("handleMouseLeave", handleMouseLeave )
 
             {/* footer section */}
 
-            <div className="footer">
+            {/* <div className="footer">
                 <div className="padding-horizontal">
                     <div className="footer-section">
                         <div className="footer-left">
@@ -594,7 +597,7 @@ console.log("handleMouseLeave", handleMouseLeave )
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
