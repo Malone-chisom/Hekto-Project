@@ -1,3 +1,4 @@
+import { useContext, useEffect } from "react";
 import image30 from "../../pictures/image30.png"
 import image1162 from "../../pictures/image1162.png";
 import image1161 from "../../pictures/image1161.png";
@@ -25,11 +26,24 @@ import cashback from "../../pictures/cashback.png";
 import premiumquality from "../../pictures/premium-quality.png";
 import hourssupport from "../../pictures/24-hours-support.png"
 import "../global-Style/Globalstyle.css"
+import { AppContext } from "../../context/context";
+import axios from "axios";
 
-function Home({isHovered, handleMouseLeave, handleMouseEnter}) {
+function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
+    const getContext = useContext(AppContext)
+    const { getApis } = getContext
 
-console.log("isHovered", isHovered)
-console.log("handleMouseLeave", handleMouseLeave )
+    useEffect(() => {
+        axios.get('https://fakestoreapi.com/products')
+            .then(res => {
+                console.log(res)
+            })
+            .catch(Error)
+    }, [])
+
+    // console.log("isHovered", isHovered)
+    // console.log("handleMouseLeave", handleMouseLeave)
+    // console.log(getApis)
 
 
     return (
@@ -54,15 +68,15 @@ console.log("handleMouseLeave", handleMouseLeave )
                                         nigeria and abroad
                                     </span>
                                 </div>
-                                <button className="section-1-left-btn" 
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                               style={{ backgroundColor: isHovered ? "red" : "#FB2E86" }}
-        
+                                <button className="section-1-left-btn"
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                    style={{ backgroundColor: isHovered ? "red" : "#FB2E86" }}
+
                                 >
                                     Shop Now
                                 </button>
-                                
+
                             </div>
 
                         </div>
@@ -78,11 +92,11 @@ console.log("handleMouseLeave", handleMouseLeave )
                     </div>
 
                 </div>
-              {/* <span className="section-1-left-lamp">
+                {/* <span className="section-1-left-lamp">
                 <img src={lamp} className="lamp-size" alt="lamp" />
             </span> */}
             </div>
-              
+
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
@@ -406,7 +420,7 @@ console.log("handleMouseLeave", handleMouseLeave )
                         </div>
                         <div className="section-5-right">
                             <div className="inner-section-5-right">
-                                <h2>
+                                <h2 className="headers">
                                     Unique Features Of Latest & Trebding products
                                 </h2>
 
@@ -477,7 +491,7 @@ console.log("handleMouseLeave", handleMouseLeave )
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* section 6 sub */}
                     <div className="section-6-sub">
                         <div className="section-6-sub-1" style={{ backgroundColor: "#FFF6FB" }}>
