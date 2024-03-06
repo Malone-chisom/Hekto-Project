@@ -508,9 +508,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 <img style={{ width: "85%" }} src={image1161} alt="" />
                             </div>
                         </div>
-                        <div className="section-6-sub-2">
+                        <div className="section-6-sub-2" >
                             <div className="section-6-sub-2-list">
-                                <div className="">
+                                <div className="section-6-sub-2-list-image">
                                     <img className="section-6-sub-2-img" src={image30} alt="" style={{ width: "55px" }} />
                                 </div>
                                 <div>
@@ -519,7 +519,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
                             </div>
                             <div className="section-6-sub-2-list">
-                                <div className="">
+                                <div className="section-6-sub-2-list-image">
                                     <img className="section-6-sub-2-img" src={image30} alt="" style={{ width: "55px" }} />
                                 </div>
                                 <div>
@@ -528,7 +528,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
                             </div>
                             <div className="section-6-sub-2-list">
-                                <div className="">
+                                <div className="section-6-sub-2-list-image">
                                     <img className="section-6-sub-2-img" src={image30} alt="" style={{ width: "55px" }} />
                                 </div>
                                 <div>

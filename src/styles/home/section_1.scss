@@ -1147,3 +1147,47 @@ button.section-1-left-btn:hover {
 
     }
 }
+@media screen and (max-width: 430px) {
+    .section-3-content{
+        // ma
+    }
+    .overall-image-box-container{
+        width: 90% !important;
+        margin: auto ;
+        // border: 1px solid black;
+        display: flex ;
+        flex-wrap: wrap !important;
+        margin-bottom: 10px !important;
+
+        .image-box-container{
+            width: 40% !important;
+        
+        }
+    }
+
+    .section-6-sub-2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        // .section-6-sub-2 {
+        //     width: 100%;
+        //     border: 5px solid yellow !important; 
+        // }
+
+        .section-6-sub-2-list {
+            flex-direction: column;
+            width: 32%;
+            
+
+            .section-6-sub-2-list-image {
+                width: 70%;
+                .section-6-sub-2-img {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+   
+}
+    
