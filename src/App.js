@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppContextProvider from "./context/context";
 import HomePage from "./components/HomePage";
 import Home from "./components/home/Home";
+import CartComponent from "./components/cart/Cart";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </AppContextProvider>
-
+{/* <CartComponent/> */}
     </div>
   )
 }

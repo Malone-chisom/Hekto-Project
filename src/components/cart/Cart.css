@@ -1,0 +1,16 @@
+.cart-to-header {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+}
+
+.cart-items-left {
+    width: 70%;
+}
+
+.cart-items-box {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
