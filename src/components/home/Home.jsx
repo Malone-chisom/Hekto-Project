@@ -38,19 +38,15 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
 
-    // useEffect(() => {
-    //     axios.get('https://fakestoreapi.com/products')
-    //         .then(res => {
-    //             setLoading(true);
-    //             setTimeout(() => {
-    //                 setLoading(false)
-    //             }, 5000);
+    useEffect(() => {
+        axios.get('https://fakestoreapi.com/products')
+            .then(res => {
 
-    //             console.log(res?.data)
-    //             setProducts(res.data)
-    //         })
-    //         .catch(Error)
-    // }, [])
+                console.log(res?.data)
+                setProducts(res.data)
+            })
+            .catch(Error)
+    }, [])
 
     // console.log("isHovered", isHovered)
     // console.log("handleMouseLeave", handleMouseLeave)
