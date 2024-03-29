@@ -19,14 +19,14 @@ function HomePage() {
                     setLoading(false)
                 }, 5000);
 
-                console.log(res?.data)
+                // console.log(res?.data)
                 // setProducts(res.data)
             })
             .catch(Error)
     }, [])
 
 
-    console.log("isNavbarOpened", isNavbarOpened)
+    // console.log("isNavbarOpened", isNavbarOpened)
 
     return (
         <div className="">

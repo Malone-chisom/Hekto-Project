@@ -15,7 +15,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/cart" element={<CartComponent/>}/>
         </Routes>
+        {/* <CartComponent/> */}
       </BrowserRouter>
       </AppContextProvider>
 {/* <CartComponent/> */}

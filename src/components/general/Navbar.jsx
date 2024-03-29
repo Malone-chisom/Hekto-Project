@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 import {
     BsEnvelope, BsSearch
@@ -19,18 +19,43 @@ import {
 } from "react-icons/md"
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart, } from "react-icons/bs"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/context"
 
 
 
 function Navbar({ isNavbarOpened, handleOpenNavbar }) {
     const navRef = useRef();
+    const navigate = useNavigate()
+
+    // const shopContext = useContext(AppContext);
+    // const { count } = shopContext
+
 
     const showNavbar = () => {
         console.log("navRef.current", navRef.current)
         navRef.current.classList.toggle('responsive_nav');
     };
 
+    const handleNavigate = (url) => {
+        navigate(`/${url}`)
+    }
+
+    const shopContext = useContext(AppContext)
+    const { cartItems, count, setCount } = shopContext
+    console.log("count", count)
+
+    // const handleDecreasedQuantity = () => {
+    //     if (count - 1) {
+    //         setCount(count - 1)
+    //     }
+    // }
+
+    // const handleIncreaseQuantity = () => {
+    //     if (count > 1) {
+    //         setCount(count + 1)
+    //     }
+    // }
 
     return (
         <div className="home container">
@@ -82,8 +107,9 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                                 </span>
                             </div>
                             <div className="navbar-top-right-3">
-                                <span className="navbar-top-right-child">
+                                <span className="navbar-top-right-child" onClick={() => handleNavigate('cart')} style={{ position: "relative" }}>
                                     <BsCart />
+                                    <span style={{ position: "absolute", top: "-7px" }}>{cartItems.length}</span>
                                 </span>
                             </div>
                             {/* <button className="nav-btn nav-close-btn" onClick={handleOpenNavbar}> */}
@@ -98,7 +124,7 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                         <button className="nav-btn" onClick={() => {
                             showNavbar()
                             handleOpenNavbar()
-                        }}> 
+                        }}>
                             {
                                 isNavbarOpened ? <MdCancel /> : <FaBars />
                             }
@@ -115,7 +141,7 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                     </div>
                     <div className="navbar-bottom-2">
                         <div className="navbar-menue-item">Home</div>
-                        <div className="navbar-menue-item navbar-menue-item-left" >Products</div>
+                        <div className="navbar-menue-item navbar-menue-item-left" > <a href="#products" >Products</a></div>
                         <div className="navbar-menue-item navbar-menue-item-left">Shop</div>
                         <div className="navbar-menue-item navbar-menue-item-left">Services</div>
                         <div className="navbar-menue-item navbar-menue-item-left">Contact</div>
@@ -125,7 +151,8 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                         <div className="search-box">
                             <input type="text" name="" />
                             <div className="search-box-icon">
-                                <BsSearch />
+                                <a href="" ><BsSearch /></a>
+
                             </div>
                         </div>
                     </div>

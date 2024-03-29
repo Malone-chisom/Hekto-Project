@@ -29,31 +29,71 @@ import "../global-Style/Globalstyle.css"
 import { AppContext } from "../../context/context";
 import axios from "axios";
 import FooterComponent from "../footer/Footer";
-
+import Swal from "sweetalert2";
 
 
 function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
     const getContext = useContext(AppContext)
     const { getApis } = getContext
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
+    // const [cartItems, setCartitems] = useState([])
+
+
+    const shopContext = useContext(AppContext);
+    const { products, setProducts, cartItems, setCartItems, count } = shopContext
+    // console.log("cart", cartItems)
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
             .then(res => {
-
-                console.log(res?.data)
                 setProducts(res.data)
+                console.log(' API products', products)
+
             })
-            .catch(Error)
+            .catch(Error => {
+                console.log(Error)
+            })
     }, [])
+
+    function handleAddToCart(product) {
+        console.log('product', product)
+        const index = cartItems.findIndex((item) => item.id === product.id);
+
+        if (index !== -1) {
+            console.log("cart item exists, so qty increased")
+            cartItems[index].qty++;
+
+            Swal.fire({
+                title: "Cart",
+                text: "Product added to cart successfully!",
+                icon: 'success'
+            })
+        } else {
+            console.log("Newly added to cart")
+
+            cartItems.push({ ...product, qty: 1 })
+            Swal.fire({
+                title: "Cart",
+                text: "Product added to cart successfully!",
+                icon: 'success'
+            })
+        }
+        console.log("cartItems", cartItems)
+    }
+
+
 
     // console.log("isHovered", isHovered)
     // console.log("handleMouseLeave", handleMouseLeave)
     // console.log(getApis)
 
 
+
     return (
+
+
+
         <div className="home">
 
             {/* Section-1/Hero starts  */}
@@ -141,7 +181,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     )) : "No products..."
                             } */}
 
-                            <div className="section-2-box box-container-for-items">
+                            <div key={products.id} className="section-2-box box-container-for-items">
                                 <div className="box-container-for-items-image">
                                     <div className="inner-box-container-for-items-image">
                                         <img src={products[2]?.image || section2image2} id="px" alt="chair" />
@@ -155,7 +195,10 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
                                     </div>
                                     <div>Code - Y523201</div>
-                                    <div>$42.00</div>
+                                    <div>{products[2]?.price || "$42.00"}</div>
+                                    <div className="adbutton">
+                                        <button onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                    </div>
                                 </div>
                                 <div>
 
@@ -177,6 +220,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </div>
                                     <div>Code - Y523201</div>
                                     <div>{products[1]?.price || "$42.00"}</div>
+                                    <div className="adbutton">
+                                        <button onClick={() => handleAddToCart(products[1])}> add to cart</button>
+                                    </div>
                                 </div>
                                 <div>
 
@@ -197,6 +243,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </div>
                                     <div>Code - Y523201</div>
                                     <div> {products[3]?.price || "$42.00"}</div>
+                                    <div className="adbutton">
+                                        <button onClick={() => handleAddToCart(products[3])}> add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                             <div className="section-2-box box-container-for-items">
@@ -214,6 +263,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </div>
                                     <div>Code - Y523201</div>
                                     <div>{products[4]?.price || "$42.00"}</div>
+                                    <div className="adbutton">
+                                        <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +275,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
             {/* Section-2/ Ends */}
 
             {/* Section-3 Starts here */}
-            <div className="section-3-container">
+            <div className="section-3-container" id="products">
                 <div className="padding-horizontal">
                     <div className="section-3">
                         <div>
@@ -254,6 +306,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                                 <span> {products[5]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div className="image-box-container">
@@ -596,7 +649,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
             {/* footer section */}
 
-            <FooterComponent />
+            {/* <FooterComponent /> */}
 
         </div>
     )

@@ -1,9 +1,35 @@
+import { useContext } from "react";
 import "../cart/Cart.css";
 import Navbar from "../general/Navbar"
+import { AppContext } from "../../context/context";
+import FooterComponent from "../footer/Footer";
 
 
 const CartComponent = () => {
+    const shopContext = useContext(AppContext);
+    const { cartItems, setCartItems, products, count, setCount } = shopContext;
 
+    const handleRemoveProductFromCart = (productId) => {
+
+        const updatedCart = cartItems.filter(item => item.id !== productId)
+
+        setCartItems(updatedCart)
+
+    }
+
+
+    const handleDecreasedQuantity = () => {
+        if (count - 1) {
+            setCount(count - 1)
+        }
+    }
+
+    const handleIncreaseQuantity = () => {
+        if (count > 1) {
+            setCount(count + 1)
+        }
+    }
+    console.log("cartItems", cartItems)
     return (
         <div>
             <Navbar />
@@ -22,35 +48,70 @@ const CartComponent = () => {
             <div className="cart-items-container">
                 <div className="padding-horizontal">
                     <div className="cart-items">
-                        <div className="cart-items-left">
-                            <div className="cart-items-box">
-                                <div>
-                                    <div>
-                                        <h4>Product</h4>
-                                    </div>
-                                </div>
+                        <div className={`cart-items-left ${cartItems.length == 1 ? 'cart-items-left-paddingY' : ''}`}>
+                            {/* <div className={`cart-items-left ${cartItems.length == 1 ? 'cart-items-left-paddingY' : ''}`}> */}
+                            {/* <div className="cart-items-left cart-items-left-paddingY"> */}
 
-                                <div>
-                                    <div>
-                                        <h4>Price</h4>
-                                    </div>
-                                    dnndnd
-                                </div>
+                            {
+                                cartItems.length === 0 ? (<div style={{ height: '35vh', display: "flex", alignItems: "center", textAlign: 'center' }}>cart is empty</div>)
+                                    :
+                                    <>
+                                        {cartItems?.map((item) => (
+                                            <div key={item?.id} className="cart-items-box" >
+                                                <div className="flexchild1">
+                                                    <div className="flexchild1-header">
+                                                        <h4>Product</h4>
+                                                    </div>
+                                                    <div className="flexchild-img">
+                                                        <div className="inner-flexchild-img">
+                                                            <img src={item?.image} className="img" alt="product_img" />
+                                                        </div>
+                                                        <div className="flexchild-text">
+                                                            <p>
+                                                                {
+                                                                    item?.title
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                <div>
-                                    <div>
-                                        <h4>Quantity</h4>
-                                    </div>
-                                    7
-                                </div>
+                                                <div className="flexchild2">
+                                                    <div className="flexchild1-header">
+                                                        <h4>price</h4>
+                                                    </div>
+                                                    <div className="">
+                                                        <p>${item?.price}</p>
+                                                    </div>
+                                                </div>
 
-                                <div>
-                                    <div>
-                                        <h4>Total</h4>
-                                    </div>
-                                    peace
-                                </div>
-                            </div>
+                                                <div className="flexchild2">
+                                                    <div className="flexchild1-header">
+                                                        <h4>Quantity</h4>
+                                                    </div>
+                                                    <div>
+                                                        <p>{item?.qty}</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div>
+                                                    <div>
+                                                        <h4>Total</h4>
+                                                    </div>
+                                                    <div>
+                                                        <p>${item?.qty * item?.price}</p>
+                                                    </div>
+                                                </div>
+                                                <button className="cancel" onClick={() => handleRemoveProductFromCart(item.id)}>x</button>
+                                            </div>
+                                        ))
+                                        }
+
+                                    </>
+                            }
+
+
                         </div>
                     </div>
                     <div></div>
@@ -58,74 +119,7 @@ const CartComponent = () => {
             </div>
 
 
-
-
-            <div className="footer">
-                <div className="padding-horizontal">
-                    <div className="footer-section">
-                        <div className="footer-left">
-                            <h1>
-                                Hekto
-                            </h1>
-
-                            <div className="email-box">
-                                <form action="">
-                                    <input name="Fname" placeholder="Enter Email Address" />
-                                </form>
-                                <div className="signup">
-                                    Sign Up
-                                </div>
-                            </div>
-                            <p>
-                                contact info <br />
-                                17, Princess Road, London Greater London NIV1 Uk
-                            </p>
-                        </div>
-                        <div className="footer-right">
-                            <h4>
-                                Categories
-                            </h4>
-                            <p>
-                                Laptops & Computer
-                            </p>
-                            <p>
-                                Cameras & Photography
-                            </p>
-                            <p>
-                                Smart Phone & Laptop
-                            </p>
-                            <p>
-                                Video Games &
-                            </p>
-                            <p>
-                                Waterproof & Headphones
-                            </p>
-                        </div>
-                        <div className="footer-right">
-                            <h4>
-                                Customer Care
-                            </h4>
-                            <p>My Account</p>
-                            <p>Discount</p>
-                            <p>Returns</p>
-                            <p>Orders History</p>
-                            <p>Order Tracking</p>
-                        </div>
-                        <div className="footer-right">
-                            <h4>
-                                Pages
-                            </h4>
-                            <p>Blog</p>
-                            <p>Browse the Shop</p>
-                            <p>Category</p>
-                            <p>Pre-Built Pages</p>
-                            <p>Viusal Composer Element</p>
-                            <p>WooCommerce Pages</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <FooterComponent />
         </div>
     )
 }

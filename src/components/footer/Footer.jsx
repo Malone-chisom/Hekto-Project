@@ -1,4 +1,5 @@
 import "../../styles/home/section_1.scss";
+import "../footer/Footer.css"
 
 const FooterComponent = () => {
 
@@ -16,7 +17,7 @@ const FooterComponent = () => {
                                 <input name="Fname" placeholder="Enter Email Address" />
                             </form>
                             <div className="signup">
-                                Sign Up
+                                <span>Sign Up</span>
                             </div>
                         </div>
                         <p>
