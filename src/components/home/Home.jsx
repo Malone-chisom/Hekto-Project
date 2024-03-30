@@ -278,7 +278,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                         <div>
                             <div className="section-heading">
                                 <span>
-                                    Latest Porducts
+                                    Latest Porductsss
                                 </span>
                             </div>
                             <div className="section-3-links sub-section-headers">

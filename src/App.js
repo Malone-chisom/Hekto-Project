@@ -22,7 +22,7 @@ function App() {
             setLoading(true);
             setTimeout(() => {
                 setLoading(false)
-            }, 5000);
+            }, 1);
 
             // console.log(res?.data)
             // setProducts(res.data)
