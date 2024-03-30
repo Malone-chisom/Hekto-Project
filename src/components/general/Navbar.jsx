@@ -24,7 +24,7 @@ import { AppContext } from "../../context/context"
 
 
 
-function Navbar({ isNavbarOpened, handleOpenNavbar }) {
+function Navbar({ isNavbarOpened }) {
     const navRef = useRef();
     const navigate = useNavigate()
 
@@ -42,7 +42,7 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
     }
 
     const shopContext = useContext(AppContext)
-    const { cartItems, count, setCount } = shopContext
+    const { cartItems, count, setCount, handleOpenNavbar } = shopContext
     console.log("count", count)
 
     // const handleDecreasedQuantity = () => {
@@ -65,15 +65,16 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                     <div className="padding-horizontal navbar-top font-normal text-white">
                         <div className="navbar-top-left">
                             <div className="navbar-top-left-1">
+                                <h1>Hekto</h1>
                                 <div className="navbar-icon-margin-right">
 
                                     <BsEnvelope />
 
-
+                                    <span>
+                                        Johnsonmalone007@mail.com
+                                    </span>
                                 </div>
-                                <span>
-                                    Johnsonmalone007@mail.com
-                                </span>
+
                             </div>
                             {/* <div className="navbar-top-left-2">
                                 <div className="navbar-icon-margin-right">
@@ -150,8 +151,8 @@ function Navbar({ isNavbarOpened, handleOpenNavbar }) {
                     <div className="navbar-bottom-3">
                         <div className="search-box">
                             <input type="text" name="" />
-                            <div className="search-box-icon">
-                                <a href="" ><BsSearch /></a>
+                            <div className="search-box-icon" >
+                                <a href="" style={{ color: "white" }}><BsSearch /></a>
 
                             </div>
                         </div>

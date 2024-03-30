@@ -337,7 +337,6 @@ button.section-1-left-btn:hover {
 
     .image-box-option {
         width: 70%;
-        // border: 1px solid red;
         height: 70%;
 
     }
@@ -349,10 +348,8 @@ button.section-1-left-btn:hover {
         justify-content: space-between;
         height: 20%;
         align-items: center;
-        border: 1px solid;
         padding-bottom: 2em;
         text-align: center;
-        // margin-top: -15px;
     }
 
 }
@@ -553,6 +550,16 @@ button.section-1-left-btn:hover {
     }
 }
 
+.navbar-top-left-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h1 {
+        margin-right: 20px;
+    }
+}
+
 // Section  6
 
 .section-6 {
@@ -593,6 +600,7 @@ button.section-1-left-btn:hover {
     }
 
 
+
     .section-6-img-container {
         // border: 1px solid;
         // box-shadow: 0 0 5px;
@@ -605,7 +613,7 @@ button.section-1-left-btn:hover {
         transition: ease-in-out;
 
         .adbutton {
-            width: 50%;
+            width: 40%;
             margin: auto;
         }
 
@@ -614,33 +622,28 @@ button.section-1-left-btn:hover {
         }
 
         .section-6-img-containertext-box {
-            // border: 1px solid red;
-            // height: 20%;
+
             align-items: center;
         }
 
-        // inner-section-6-img-container 
+
         .inner-image-box-container {
-            // border: 1px solid blue;
 
             padding: 10px 0;
             align-items: center;
             display: flex;
             justify-content: center;
             height: 80%;
-            // background-color: red;
-            // background-color: whitesmoke;
+
         }
 
         .inner-section-6-img-container {
-            // border: 1px solid blue;
-            // background-color: pink;
             width: 60%;
         }
 
         .sec6img {
             width: 100%;
-            // height: 240px;
+
         }
 
         p {
@@ -699,9 +702,7 @@ button.section-1-left-btn:hover {
     display: flex;
 }
 
-.section-6-sub-2-img {
-    // border: 1px solid black;
-}
+.section-6-sub-2-img {}
 
 .footer {
     background-color: #F1F0FF;
@@ -1099,6 +1100,21 @@ button.section-1-left-btn:hover {
 
 
 @media screen and (max-width: 500px) {
+    .navbar-icon-margin-right span {
+        display: none !important;
+    }
+
+    .navbar-top-left-1 {
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            margin-right: 10px;
+        }
+
+
+    }
+
     .section-1-left {
         .section-1-left-content {
             .section-1-left-content-heading {
@@ -1375,14 +1391,9 @@ button.section-1-left-btn:hover {
     }
 
     .box-text {
-        border: 2px solid !important;
 
         .adbutton {
             border: 1px solid;
-
-            button {
-                // width: 1040% !important;
-            }
 
         }
     }
