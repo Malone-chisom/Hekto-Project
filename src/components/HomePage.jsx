@@ -6,24 +6,25 @@ import axios from "axios";
 import { ClipLoader } from "react-spinners";
 
 
-function HomePage() {
+function HomePage({ setProducts }) {
     const shopContext = useContext(AppContext)
     const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter } = shopContext;
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
-    // useEffect(() => {
-    //     axios.get('https://fakestoreapi.com/products')
-    //         .then(res => {
-    //             setLoading(true);
-    //             setTimeout(() => {
-    //                 setLoading(false)
-    //             }, 5000);
 
-    //             // console.log(res?.data)
-    //             // setProducts(res.data)
-    //         })
-    //         .catch(Error)
-    // }, [])
+    useEffect(() => {
+        axios.get('https://fakestoreapi.com/products')
+            .then(res => {
+                setLoading(true);
+                // setTimeout(() => {
+                //     setLoading(false)
+                // }, 5000);
+
+                // console.log(res?.data)
+                setProducts(res.data)
+            })
+            .catch(Error)
+    }, [])
 
 
     // console.log("isNavbarOpened", isNavbarOpened)
@@ -31,28 +32,28 @@ function HomePage() {
     return (
         <div className="">
 
-            {/* {
+            {
                 loading ?
                     <ClipLoader color="#36d7b7" loading={loading} size={100} />
                     :
-                    <> */}
-            {
-                isNavbarOpened ?
-
                     <>
-                        <Navbar handleOpenNavbar={handleOpenNavbar} />
+                        {
+                            isNavbarOpened ?
+
+                                <>
+                                    <Navbar handleOpenNavbar={handleOpenNavbar} />
+
+                                </>
+                                :
+                                <>
+                                    <Navbar isNavbarOpened={isNavbarOpened} handleOpenNavbar={handleOpenNavbar} />
+                                    <Home isHovered={isHovered} handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} setIsHovered={setIsHovered} />
+                                </>
+                        }
 
                     </>
-                    :
-                    <>
-                        <Navbar isNavbarOpened={isNavbarOpened} handleOpenNavbar={handleOpenNavbar} />
-                        <Home isHovered={isHovered} handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} setIsHovered={setIsHovered} />
-                    </>
+
             }
-
-            {/* </>
-
-            } */}
 
 
 

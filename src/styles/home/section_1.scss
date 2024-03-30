@@ -2,7 +2,7 @@
     z-index: 1;
 }
 
-.section-1-container {
+.ection-1-container {
     position: relative;
     // background-color: #F2F0FF;
     box-sizing: border-box;
@@ -366,16 +366,15 @@ button.section-1-left-btn:hover {
 
 .adbutton button {
     width: 100% !important;
-    background-color: #151875;
+    background-color: violet;
     color: white;
+    outline: none !important;
     // padding: 5px;
 }
 
 .box-text {
 
     .adbutton {
-        border: 1px solid;
-
         button {
             width: 100% !important;
         }
@@ -622,7 +621,6 @@ button.section-1-left-btn:hover {
         }
 
         .section-6-img-containertext-box {
-
             align-items: center;
         }
 
@@ -751,7 +749,11 @@ button.section-1-left-btn:hover {
 
 
 
-
+.cart-button {
+    outline: none;
+    border: none;
+    padding: 5px;
+}
 
 @media only screen and (max-width: 1030px) {
     .section-1 {
@@ -853,7 +855,12 @@ button.section-1-left-btn:hover {
 
             .box-text {
                 padding-bottom: 2em;
+
+
             }
+
+
+
 
         }
     }
@@ -877,9 +884,7 @@ button.section-1-left-btn:hover {
         }
     }
 
-    .section-6-img-containertext-box {
-        font-size: 0.8em;
-    }
+
 
     .section-6-sub-2-list {
         position: relative;
@@ -916,6 +921,45 @@ button.section-1-left-btn:hover {
     .footer p {
         font-size: 13px;
     }
+
+    .section-3-content {
+
+
+        .image-box-container {
+            .adbutton {
+                width: 70%;
+
+
+                .cart-button {
+                    width: 100% !important;
+
+                }
+            }
+        }
+    }
+
+    .section-6-img-container {
+        padding-bottom: 4em !important;
+
+        .section-6-img-containertext-box {
+
+            .adbutton {
+                width: 80% !important;
+
+
+
+                .cart-button {
+                    width: 100%;
+
+                }
+            }
+
+
+
+            font-size: 0.8em;
+        }
+    }
+
 
 }
 
@@ -1390,13 +1434,6 @@ button.section-1-left-btn:hover {
         width: 5em;
     }
 
-    .box-text {
-
-        .adbutton {
-            border: 1px solid;
-
-        }
-    }
 
 
 }
