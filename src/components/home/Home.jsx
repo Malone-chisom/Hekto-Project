@@ -189,7 +189,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
                                 <div className="box-container-text-container">
                                     <div> {products[2]?.title || "Cantila chair"}</div>
-                                    <div className="dash-container">
+                                    <div className="dash-container" style={{ margin: "9px" }}>
                                         <div className="dash green" style={{ backgroundColor: "green" }}></div>
                                         <div className="dash red" style={{ backgroundColor: "red" }}></div>
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
@@ -197,11 +197,8 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     <div>Code - Y523201</div>
                                     <div>{products[2]?.price || "$42.00"}</div>
                                     <div className="adbutton">
-                                        <button onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
                                     </div>
-                                </div>
-                                <div>
-
                                 </div>
                             </div>
 
@@ -211,9 +208,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                         <img src={products[1]?.image || section2image2} id="px" alt="chair" />
                                     </div>
                                 </div>
-                                <div className="box-container-text-container">
+                                <div className="box-container-text-container" >
                                     <div> {products[1]?.title || "Cantila chair"}</div>
-                                    <div className="dash-container">
+                                    <div className="dash-container" style={{ margin: "7px" }}>
                                         <div className="dash green" style={{ backgroundColor: "green" }}></div>
                                         <div className="dash red" style={{ backgroundColor: "red" }}></div>
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
@@ -221,7 +218,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     <div>Code - Y523201</div>
                                     <div>{products[1]?.price || "$42.00"}</div>
                                     <div className="adbutton">
-                                        <button onClick={() => handleAddToCart(products[1])}> add to cart</button>
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[1])}> add to cart</button>
                                     </div>
                                 </div>
                                 <div>
@@ -236,7 +233,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
                                 <div className="box-container-text-container">
                                     <div> {products[3]?.title || "Cantila chair"}</div>
-                                    <div className="dash-container">
+                                    <div className="dash-container" style={{ margin: "9px" }}>
                                         <div className="dash green" style={{ backgroundColor: "green" }}></div>
                                         <div className="dash red" style={{ backgroundColor: "red" }}></div>
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
@@ -244,7 +241,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     <div>Code - Y523201</div>
                                     <div> {products[3]?.price || "$42.00"}</div>
                                     <div className="adbutton">
-                                        <button onClick={() => handleAddToCart(products[3])}> add to cart</button>
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[3])}> add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +253,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
                                 <div className="box-container-text-container">
                                     <div> {products[4]?.title || "Cantila chair"} </div>
-                                    <div className="dash-container">
+                                    <div className="dash-container" style={{ margin: "5px" }}>
                                         <div className="dash green" style={{ backgroundColor: "green" }}></div>
                                         <div className="dash red" style={{ backgroundColor: "red" }}></div>
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
@@ -264,7 +261,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     {/* <div>Code - Y523201</div> */}
                                     <div>{products[4]?.price || "$42.00"}</div>
                                     <div className="adbutton">
-                                        <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -302,12 +299,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span>{products[5]?.title || "Cafty Handy"}</span>
                                             </div>
-                                            <div >
+                                            <div style={{ margin: "10px 0" }}>
                                                 <span> {products[5]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -321,12 +318,11 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[6]?.title || "Cafty Handy"}</span>
                                             </div>
-                                            <div>
+                                            <div style={{ margin: "12   px 0" }}>
                                                 <span>{products[6]?.pice || "42.00"}</span>
-                                                <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -340,12 +336,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[8]?.title || "Cafty Handy"} </span>
                                             </div>
-                                            <div>
+                                            <div style={{ margin: "7px 0" }}>
                                                 <span>{products[8]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -361,12 +357,11 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[9]?.title || "Cafty Handy"}</span>
                                             </div>
-                                            <div>
+                                            <div style={{ margin: "10px 0" }}>
                                                 <span> {products[9]?.price || "$42.00"}</span>
-                                                <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -380,12 +375,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[10]?.title || "Cafty Handy"} </span>
                                             </div>
-                                            <div>
+                                            <div style={{ margin: "2px 0" }}>
                                                 <span> {products[10]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -399,12 +394,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[11]?.title || "Cafty Handy"}</span>
                                             </div>
-                                            <div>
+                                            <div style={{ margin: "2px 0" }}>
                                                 <span> {products[11]?.price || '$42.00'} </span>
                                                 <span></span>
                                             </div>
                                             <div className="adbutton">
-                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                                <button className="cart-button" onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -569,8 +564,11 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
 
                                 <div className="section-6-img-containertext-box">
-                                    <p> {products[9]?.title || "Cantilever chair"} </p>
-                                    <pre style={{ fontSize: "11px" }}>$26.00 $42.00</pre>
+                                    <p> {products[550]?.title || "Sandisk SSD Plus 1TB International SSD SATA ||| 6"} </p>
+                                    <pre style={{ fontSize: "11px" }}>{products[9]?.price}</pre>
+                                    <div className="adbutton">
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                             <div className="section-6-img-container">
@@ -581,8 +579,11 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
 
                                 <div className="section-6-img-containertext-box">
-                                    <p> {products[13]?.title || "Cantilever chair"}</p>
-                                    <pre style={{ fontSize: "11px" }}>$26.00 $42.00</pre>
+                                    <p> {products[50]?.title || "Samsung 49-inch CHG90 Curved Gaming Monitor"}</p>
+                                    <pre style={{ fontSize: "11px" }}>{products[9]?.price}</pre>
+                                    <div className="adbutton">
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                             <div className="section-6-img-container">
@@ -594,7 +595,10 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
                                 <div className="section-6-img-containertext-box">
                                     <p> {products[18]?.title || 'Cantilever chair'}</p>
-                                    <pre style={{ fontSize: "11px" }}>$26.00 $42.00</pre>
+                                    <pre style={{ fontSize: "11px" }}>{products[18]?.price}</pre>
+                                    <div className="adbutton">
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                             <div className="section-6-img-container">
@@ -604,9 +608,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </div>
                                 </div>
 
-                                <div className="section-6-img-containertext-box">
+                                <div className="section-6-img-containertext-box ">
                                     <p> {products[17]?.title || "Cantilever chair"}</p>
-                                    <pre style={{ fontSize: "11px" }}>$26.00 $42.00</pre>
+                                    <pre style={{ fontSize: "11px" }}>{products[17]?.price}</pre>
+                                    <div className="adbutton">
+                                        <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
