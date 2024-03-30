@@ -184,7 +184,9 @@ button.section-1-left-btn:hover {
             font-size: 18px;
         }
 
-
+        .box-container-for-items-image {
+            background-color: white;
+        }
 
         .section-2-box-container {
             display: flex;
@@ -193,6 +195,7 @@ button.section-1-left-btn:hover {
 
 
             .section-2-box {
+                background-color: white;
                 // border: 1px solid black;
                 width: 24%;
                 height: 360px;
@@ -351,15 +354,29 @@ button.section-1-left-btn:hover {
 
 .box-container-text-container .adbutton {
     justify-content: center;
+    margin: auto;
     // width: ;
-    // width: 50%;
-
+    height: 1em;
+    width: 40%;
+    border: 1px solid red !important;
 }
 
 .adbutton button {
-    width: 40%;
+    width: 100% !important;
     background-color: #151875;
     color: white;
+}
+
+.box-text {
+
+    .adbutton {
+        border: 1px solid;
+
+        button {
+            width: 100% !important;
+        }
+
+    }
 }
 
 // .image-box-option {
@@ -674,23 +691,12 @@ button.section-1-left-btn:hover {
     // flex-wrap: wrap;
     // border: 1px solid black;
     margin-top: 40px;
+    justify-content: space-between;
 
 
-    .footer-left {
-        width: 35%;
-        border: 1px solid;
 
-
-        h1 {
-            // display: flex;
-            // align-items: center;
-        }
-
-    }
 
     .footer-right {
-        width: 25%;
-        border: 1px solid red;
 
         h4 {
             line-height: 43px;
@@ -1052,6 +1058,8 @@ button.section-1-left-btn:hover {
         //   
     }
 
+
+
 }
 
 
@@ -1270,6 +1278,47 @@ button.section-1-left-btn:hover {
         }
     }
 
+    .section-3-content {
+        border: 1px solid pink;
+
+
+    }
+
+    .overall-image-box-container {
+        flex-direction: column;
+        width: 90%;
+
+        .image-box-container {
+            width: 100% !important;
+
+            .inner-image-box-container {
+                border: 1px solid green;
+                width: 100%;
+                padding: 2em 0;
+
+
+                .inner-image-box {
+                    border: 1px solid red;
+                    width: 75%;
+                    height: 12em;
+
+                    .caftypic {
+                        // width: 20%;
+                    }
+                }
+            }
+
+            .box-text {
+                line-height: 1.6em;
+                padding: 1em 2em;
+                border: 1px solid red;
+                font-size: 0.9em;
+            }
+
+        }
+    }
+
+
 
 }
 
@@ -1290,41 +1339,27 @@ button.section-1-left-btn:hover {
         position: absolute;
         top: 0;
         left: 77%;
-        border: 1px solid;
         width: 5em;
-
     }
+
+    .box-text {
+        border: 2px solid !important;
+
+        .adbutton {
+            border: 1px solid;
+
+            button {
+                // width: 1040% !important;
+            }
+
+        }
+    }
+
 
 }
 
 
-@media screen and (max-width: 320px) {
-    .section-1-left-content-heading {
-        margin: 0;
-        padding: 0 !important;
-        font-size: 17px !important;
-    }
 
-    .section-1-left-lamp {
-        left: 70%;
-        width: 4.5em;
-
-    }
-
-    .section-1-left {
-        font-size: 10px !important;
-
-    }
-
-    .section-1-container {
-        width: 100%;
-        // background-color: red;
-
-
-    }
-
-    .section-5-right {}
-}
 
 @media screen and (max-width: 430px) {
     .section-3-content {
@@ -1340,9 +1375,13 @@ button.section-1-left-btn:hover {
         margin-bottom: 10px !important;
 
         .image-box-container {
-            width: 40% !important;
+            // width: 40% !important;
 
         }
+    }
+
+    .section-2-box .adbutton {
+        width: 50%;
     }
 
     .section-6-sub-2 {
@@ -1370,4 +1409,81 @@ button.section-1-left-btn:hover {
         }
     }
 
+}
+
+@media screen and (max-width: 320px) {
+    .section-1-left-content-heading {
+        margin: 0;
+        padding: 0 !important;
+        font-size: 17px !important;
+    }
+
+    .section-1-left-lamp {
+        left: 70%;
+        width: 4.5em;
+
+    }
+
+    .section-1-left {
+        font-size: 10px !important;
+
+    }
+
+    .inner-image-box-container {
+        // height: 70% !important;
+
+
+        // .image-box-option-2 {
+        //     width: 50%;
+        //     height: 30%;
+        // }
+    }
+
+    .box-text {
+        // 
+
+    }
+
+    .section-1-container {
+        width: 100%;
+        // background-color: red;
+
+
+    }
+
+    .adbutton button {
+        width: 50%;
+        // font-size: 0.7em;
+    }
+
+    .section-3-links div {
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+
+    .section-3 {
+
+
+        .image-box-container {
+            border: 3px solid red;
+
+            // padding-bottom: 3em;
+
+
+            .adbutton button {
+                width: 100%;
+                // font-size: 0.7em;
+            }
+
+            .box-text {
+
+                // padding-bottom: 1em;
+                .adbutton {
+                    // border: 4px solid red !important;
+                }
+            }
+        }
+    }
+
+    .section-5-right {}
 }

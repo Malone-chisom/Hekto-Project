@@ -7,25 +7,25 @@ const FooterComponent = () => {
         <div className="footer">
             <div className="padding-horizontal">
                 <div className="footer-section">
-                    <div className="footer-left">
+                    <div className="footer-left footer-y">
                         <h1>
                             Hekto
                         </h1>
 
-                        <div className="email-box">
+                        {/* <div className="email-box">
                             <form action="">
                                 <input name="Fname" placeholder="Enter Email Address" />
                             </form>
                             <div className="signup">
                                 <span>Sign Up</span>
                             </div>
-                        </div>
+                        </div> */}
                         <p>
                             contact info <br />
                             17, Princess Road, London Greater London NIV1 Uk
                         </p>
                     </div>
-                    <div className="footer-right">
+                    <div className="footer-right footer-y">
                         <h4>
                             Categories
                         </h4>
@@ -45,7 +45,7 @@ const FooterComponent = () => {
                             Waterproof & Headphones
                         </p>
                     </div>
-                    <div className="footer-right">
+                    <div className="footer-right footer-y">
                         <h4>
                             Customer Care
                         </h4>
@@ -55,7 +55,7 @@ const FooterComponent = () => {
                         <p>Orders History</p>
                         <p>Order Tracking</p>
                     </div>
-                    <div className="footer-right">
+                    <div className="footer-right footer-y">
                         <h4>
                             Pages
                         </h4>

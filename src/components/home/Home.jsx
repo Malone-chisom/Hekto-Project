@@ -261,7 +261,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                         <div className="dash red" style={{ backgroundColor: "red" }}></div>
                                         <div className="dash blue" style={{ backgroundColor: "blue" }}></div>
                                     </div>
-                                    <div>Code - Y523201</div>
+                                    {/* <div>Code - Y523201</div> */}
                                     <div>{products[4]?.price || "$42.00"}</div>
                                     <div className="adbutton">
                                         <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
@@ -285,7 +285,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </span>
                             </div>
                             <div className="section-3-links sub-section-headers">
-                                <div>New Arival</div>
+                                <div className="">New Arival</div>
                                 <div>Best Seller</div>
                                 <div>Featured</div>
                                 <div>Special offer</div>
@@ -298,15 +298,17 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                                 <img src={products[5]?.image || image1166} className="caftypic" alt="chair" />
                                             </div>
                                         </div>
-                                        <div className="box-text">
+                                        <div className="box-text" >
                                             <div>
                                                 <span>{products[5]?.title || "Cafty Handy"}</span>
                                             </div>
-                                            <div>
+                                            <div >
                                                 <span> {products[5]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
-
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="image-box-container">
@@ -323,11 +325,14 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                                 <span>{products[6]?.pice || "42.00"}</span>
                                                 <span></span>
                                             </div>
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="image-box-container">
-                                        <div className="inner-image-box-container">
-                                            <div className="inner-image-box image-box-option ">
+                                        <div className="inner-image-box-container" >
+                                            <div className="inner-image-box image-box-option  ">
                                                 <img src={products[8]?.image || image22} className="caftypic" alt="chair" />
                                             </div>
                                         </div>
@@ -338,6 +343,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span>{products[8]?.price || "$42.00"}</span>
                                                 <span></span>
+                                            </div>
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -357,6 +365,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                                 <span> {products[9]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="image-box-container">
@@ -373,6 +384,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                                 <span> {products[10]?.price || "$42.00"}</span>
                                                 <span></span>
                                             </div>
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="image-box-container">
@@ -388,6 +402,9 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                             <div>
                                                 <span> {products[11]?.price || '$42.00'} </span>
                                                 <span></span>
+                                            </div>
+                                            <div className="adbutton">
+                                                <button onClick={() => handleAddToCart(products[4])}> add to cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -529,7 +546,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </p>
                                 </div>
                             </div>
-                        </div>a
+                        </div>
                     </div>
                 </div>
             </div>
@@ -649,7 +666,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
             {/* footer section */}
 
-            {/* <FooterComponent /> */}
+            <FooterComponent />
 
         </div>
     )
