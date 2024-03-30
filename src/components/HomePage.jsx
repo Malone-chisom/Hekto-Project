@@ -6,9 +6,9 @@ import axios from "axios";
 import { ClipLoader } from "react-spinners";
 
 
-function HomePage({ setProducts }) {
+function HomePage() {
     const shopContext = useContext(AppContext)
-    const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter, } = shopContext;
+    const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter, setProducts } = shopContext;
     const [loading, setLoading] = useState(false)
 
 
@@ -25,22 +25,22 @@ function HomePage({ setProducts }) {
                 // console.log(res?.data)
 
 
-
+                setLoading(false)
 
             })
             .catch(Error)
-        setLoading(false)
+
     }, [])
 
 
     // console.log("isNavbarOpened", isNavbarOpened)
 
     return (
-        <div className="">
+        <div >
 
             {
                 loading ?
-                    <ClipLoader color="#36d7b7" loading={loading} size={100} />
+                    <div style={{ display: "flex", justifyContent: "center", height: "100vh", alignItems: "center" }}> <ClipLoader color="#36d7b7" loading={loading} size={100} /> </div>
                     :
                     <>
                         {
