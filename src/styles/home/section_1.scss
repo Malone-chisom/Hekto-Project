@@ -1490,6 +1490,12 @@ button.section-1-left-btn:hover {
 
 }
 
+@media screen and (max-width: 362px) {
+    .section-3-links {
+        font-size: 0.6em !important;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .section-1-left-content-heading {
         margin: 0;
@@ -1536,7 +1542,7 @@ button.section-1-left-btn:hover {
     }
 
     .section-3-links div {
-        font-size: 0.6em;
+        font-size: 0.7em !important;
         font-weight: bold;
     }
 
@@ -1565,4 +1571,10 @@ button.section-1-left-btn:hover {
     }
 
     .section-5-right {}
+}
+
+@media screen and (max-width: 282px) {
+    .section-3-links {
+        font-size: 0.5;
+    }
 }
