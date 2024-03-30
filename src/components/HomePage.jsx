@@ -8,22 +8,28 @@ import { ClipLoader } from "react-spinners";
 
 function HomePage({ setProducts }) {
     const shopContext = useContext(AppContext)
-    const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter } = shopContext;
+    const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter, } = shopContext;
     const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
+        setLoading(true)
         axios.get('https://fakestoreapi.com/products')
             .then(res => {
-                setLoading(true);
+                setProducts(res?.data)
+
                 // setTimeout(() => {
                 //     setLoading(false)
                 // }, 5000);
 
                 // console.log(res?.data)
-                setProducts(res.data)
+
+
+
+
             })
             .catch(Error)
+        setLoading(false)
     }, [])
 
 
