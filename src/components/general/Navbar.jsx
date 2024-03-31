@@ -18,7 +18,7 @@ import {
 } from "react-icons/md"
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart, } from "react-icons/bs"
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../../context/context"
 import HomePage from "../HomePage"
 
@@ -70,7 +70,7 @@ function Navbar({ isNavbarOpened }) {
                     <div className="padding-horizontal navbar-top font-normal text-white">
                         <div className="navbar-top-left">
                             <div className="navbar-top-left-1">
-                                <h1 onClick={handleNavgate('/')}>Hekto</h1>
+                                <h1 onClick={() => handleNavigate("home")} >Hekto</h1 >
                                 <div className="navbar-icon-margin-right">
 
                                     <BsEnvelope />
@@ -93,7 +93,7 @@ function Navbar({ isNavbarOpened }) {
                         </div>
                         <div className="navbar-top-right" ref={navRef}>
                             <div className="display-small-screen">
-                                <li onClick={handleNavgate('/')}>Home </li>
+                                <li onClick={() => handleNavgate('/')}>Home </li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Product</a></li>
                                 <li><a href="#">Services</a></li>
@@ -141,15 +141,17 @@ function Navbar({ isNavbarOpened }) {
                 <div className="padding-horizontal navbar-bottom">
 
                     <div className="navbar-bottom-1" >
-                        <span className="navbar-logo">
+
+                        <span className="navbar-logo" onClick={() => handleNavigate("home")}>
                             Hekto
                         </span>
+
                     </div>
                     <div className="navbar-bottom-2">
-                        <div className="navbar-menue-item">Home</div>
-                        <div className="navbar-menue-item navbar-menue-item-left" > <a href="#products" >Products</a></div>
+                        <div className="navbar-menue-item" onClick={() => handleNavigate("home")}>Home</div>
+                        <div className="navbar-menue-item navbar-menue-item-left" > <span href="#products" >Products</span></div>
                         <div className="navbar-menue-item navbar-menue-item-left">Shop</div>
-                        <div className="navbar-menue-item navbar-menue-item-left">Services</div>
+                        <div className="navbar-menue-item navbar-menue-item-left"> Services</div>
                         <div className="navbar-menue-item navbar-menue-item-left">Contact</div>
 
                     </div>

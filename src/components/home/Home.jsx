@@ -414,14 +414,14 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
             {/* section-4 Starts Here */}
 
-            <div className="section-4-container">
+            <div className="section-4-container" id="services">
                 <div className="padding-horizontal">
                     <div className="section-4">
                         <div className=" section-heading">
                             <span>What Shopex Offer!</span>
                         </div>
                         <div className="section-4-flex">
-                            <div className="section-4-flex-box">
+                            <div className="section-4-flex-box ">
                                 <div className="inner-section-4-flex-box">
                                     <div className="section-4-flex-center">
                                         <div className="section-4-flex-box-icon">

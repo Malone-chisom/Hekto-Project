@@ -64,14 +64,14 @@
 
 .navbar-top-right {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: center !important;
+    justify-content: center !important;
     gap: 5px;
-    // justify-content:;
-
 
     .display-small-screen li {
         list-style-type: none;
+        line-height: 2em;
+        font-size: larger;
 
         a {
             color: white;

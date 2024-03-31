@@ -8,7 +8,7 @@ const FooterComponent = () => {
             <div className="padding-horizontal">
                 <div className="footer-section">
                     <div className="footer-left footer-y">
-                        <h1>
+                        <h1 onClick={() => handleNavigate("home")}>
                             Hekto
                         </h1>
 

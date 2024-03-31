@@ -21,6 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/home" element={<HomePage/>}/>
           <Route path="/cart" element={<CartComponent/>}/>
         </Routes>
   
