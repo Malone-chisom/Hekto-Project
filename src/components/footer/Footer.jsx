@@ -1,7 +1,14 @@
 import "../../styles/home/section_1.scss";
 import "../footer/Footer.css"
+import { useNavigate } from "react-router-dom";
 
 const FooterComponent = () => {
+    const navigate = useNavigate()
+
+
+    const handleNavigate = (url) => {
+        navigate(`/${url}`)
+    }
 
     return (
         <div className="footer">
