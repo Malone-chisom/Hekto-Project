@@ -13,7 +13,7 @@ function HomePage() {
 
 
     useEffect(() => {
-        // setLoading(true)
+        setLoading(true)
         axios.get('https://fakestoreapi.com/products')
             .then(res => {
                 setProducts(res?.data)
@@ -25,7 +25,7 @@ function HomePage() {
                 // console.log(res?.data)
 
 
-                // setLoading(false)
+                setLoading(false)
 
             })
             .catch(Error)
