@@ -1,5 +1,4 @@
 import { useContext, useEffect, useRef, useState } from "react"
-
 import {
     BsEnvelope, BsSearch
 } from "react-icons/bs"
@@ -21,6 +20,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart, } from "react-icons/bs"
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../../context/context"
+import HomePage from "../HomePage"
 
 
 
@@ -39,6 +39,11 @@ function Navbar({ isNavbarOpened }) {
 
     const handleNavigate = (url) => {
         navigate(`/${url}`)
+    }
+
+
+    const handleNavgate = (page) => {
+        navigate(page)
     }
 
     const shopContext = useContext(AppContext)
@@ -65,7 +70,7 @@ function Navbar({ isNavbarOpened }) {
                     <div className="padding-horizontal navbar-top font-normal text-white">
                         <div className="navbar-top-left">
                             <div className="navbar-top-left-1">
-                                <h1>Hekto</h1>
+                                <h1 onClick={handleNavgate('/')}>Hekto</h1>
                                 <div className="navbar-icon-margin-right">
 
                                     <BsEnvelope />
@@ -88,7 +93,7 @@ function Navbar({ isNavbarOpened }) {
                         </div>
                         <div className="navbar-top-right" ref={navRef}>
                             <div className="display-small-screen">
-                                <li><a href="#">Home</a></li>
+                                <li onClick={handleNavgate('/')}>Home </li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Product</a></li>
                                 <li><a href="#">Services</a></li>

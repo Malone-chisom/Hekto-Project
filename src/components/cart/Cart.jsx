@@ -60,14 +60,14 @@ const CartComponent = () => {
                                             <div key={item?.id} className="cart-items-box" >
                                                 <div className="flexchild1">
                                                     <div className="flexchild1-header">
-                                                        <h4>Product</h4>
+                                                        <h4 className="font-size-h" >Product</h4>
                                                     </div>
                                                     <div className="flexchild-img">
                                                         <div className="inner-flexchild-img">
                                                             <img src={item?.image} className="img" alt="product_img" />
                                                         </div>
                                                         <div className="flexchild-text">
-                                                            <p>
+                                                            <p className="font-size">
                                                                 {
                                                                     item?.title
                                                                 }
@@ -78,29 +78,29 @@ const CartComponent = () => {
 
                                                 <div className="flexchild2">
                                                     <div className="flexchild1-header">
-                                                        <h4>price</h4>
+                                                        <h4 className="font-size-h">price</h4>
                                                     </div>
                                                     <div className="">
-                                                        <p>${item?.price}</p>
+                                                        <p className="font-size">${item?.price}</p>
                                                     </div>
                                                 </div>
 
                                                 <div className="flexchild2">
                                                     <div className="flexchild1-header">
-                                                        <h4>Quantity</h4>
+                                                        <h4 className="font-size-h">Quantity</h4>
                                                     </div>
                                                     <div>
-                                                        <p>{item?.qty}</p>
+                                                        <p className="font-size">{item?.qty}</p>
                                                     </div>
                                                 </div>
 
 
                                                 <div>
                                                     <div>
-                                                        <h4>Total</h4>
+                                                        <h4 className="font-size-h">Total</h4>
                                                     </div>
                                                     <div>
-                                                        <p>${item?.qty * item?.price}</p>
+                                                        <p className="font-size">${item?.qty * item?.price}</p>
                                                     </div>
                                                 </div>
                                                 <button className="cancel" onClick={() => handleRemoveProductFromCart(item.id)}>x</button>
