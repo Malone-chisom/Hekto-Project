@@ -1,21 +1,21 @@
 import "../../styles/home/section_1.scss";
 import "../footer/Footer.css"
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const FooterComponent = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
 
-    const handleNavigate = (url) => {
-        navigate(`/${url}`)
-    }
+    // const handleNavigate = (url) => {
+    //     navigate(`/${url}`)
+
 
     return (
         <div className="footer">
             <div className="padding-horizontal">
                 <div className="footer-section">
                     <div className="footer-left footer-y">
-                        <h1 onClick={() => handleNavigate("home")}>
+                        <h1 >
                             Hekto
                         </h1>
 
@@ -77,6 +77,9 @@ const FooterComponent = () => {
 
             </div>
         </div>
+
     )
 }
+
+
 export default FooterComponent;

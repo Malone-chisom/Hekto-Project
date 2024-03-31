@@ -70,7 +70,7 @@ function Navbar({ isNavbarOpened }) {
                     <div className="padding-horizontal navbar-top font-normal text-white">
                         <div className="navbar-top-left">
                             <div className="navbar-top-left-1">
-                                <h1 onClick={() => handleNavigate("home")} >Hekto</h1 >
+                                <h1  >Hekto</h1 >
                                 <div className="navbar-icon-margin-right">
 
                                     <BsEnvelope />
@@ -93,7 +93,7 @@ function Navbar({ isNavbarOpened }) {
                         </div>
                         <div className="navbar-top-right" ref={navRef}>
                             <div className="display-small-screen">
-                                <li onClick={() => handleNavgate('/')}>Home </li>
+                                <li onClick={() => handleNavigate("home")}>Home </li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Product</a></li>
                                 <li><a href="#">Services</a></li>

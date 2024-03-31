@@ -414,7 +414,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
             {/* section-4 Starts Here */}
 
-            <div className="section-4-container" id="services">
+            <div className="section-4-container" >
                 <div className="padding-horizontal">
                     <div className="section-4">
                         <div className=" section-heading">
