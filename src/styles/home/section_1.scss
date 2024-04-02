@@ -369,6 +369,8 @@ button.section-1-left-btn:hover {
     background-color: violet;
     color: white;
     outline: none !important;
+    border-radius: 4px;
+
     // padding: 5px;
 }
 
@@ -416,7 +418,7 @@ button.section-1-left-btn:hover {
             .section-4-flex-box {
                 width: 23%;
 
-                box-shadow: 0 5px 8px #000000;
+                box-shadow: 0px 0.5px 3px 0.5px #000000;
                 text-align: center;
                 // border: 1px solid red;
                 cursor: pointer;
@@ -1143,7 +1145,7 @@ button.section-1-left-btn:hover {
 
 
 @media screen and (max-width: 500px) {
-    .navbar-icon-margin-right span {
+    .navbar-icon-margin-right {
         display: none !important;
     }
 
@@ -1277,6 +1279,7 @@ button.section-1-left-btn:hover {
     .section-5-cart {
         flex-direction: row-reverse;
         justify-content: center;
+        flex-direction: column-reverse;
 
         p {
             font-weight: 500;
@@ -1287,6 +1290,9 @@ button.section-1-left-btn:hover {
             outline: none;
             border: none;
             padding: 5px 10px;
+            width: 40%;
+            border-radius: 4px;
+            margin: auto;
         }
     }
 
@@ -1298,7 +1304,6 @@ button.section-1-left-btn:hover {
         .section-6-img-container {
             width: 80%;
             margin: 20px 0;
-            // border: 1px solid;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
             .inner-section-6-img-container {
                 display: flex;
@@ -1367,14 +1372,14 @@ button.section-1-left-btn:hover {
     }
 
     .section-3-content {
-        // border: 1px solid pink;
+        //   
 
 
     }
 
     .overall-image-box-container {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
 
 
         .image-box-container {
@@ -1409,14 +1414,25 @@ button.section-1-left-btn:hover {
         }
     }
 
+    .adbutton button {
+        padding: 7px 0;
+        // border: 2px solid red;
+    }
+
 
 
 }
 
 @media screen and (max-width: 425px) {
+    .section-1-left {
+        margin-top: 30px;
+    }
+
+
     .section-3-content {
 
         .overall-image-box-container {
+            width: 100%;
 
             .image-box-container {
                 margin-bottom: 1.7em;
@@ -1446,7 +1462,7 @@ button.section-1-left-btn:hover {
     }
 
     .overall-image-box-container {
-        width: 90% !important;
+        width: 100%;
         margin: auto;
         // border: 1px solid black;
         display: flex;

@@ -564,7 +564,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                 </div>
 
                                 <div className="section-6-img-containertext-box">
-                                    <p> {products[550]?.title || "Sandisk SSD Plus 1TB International SSD SATA ||| 6"} </p>
+                                    <p> {products[550]?.title || "Sandisk SSD Plus 1TB International SSD SATA"} </p>
                                     <pre style={{ fontSize: "11px" }}>{products[9]?.price}</pre>
                                     <div className="adbutton">
                                         <button className="cart-button" onClick={() => handleAddToCart(products[2])} > add to cart</button>
