@@ -40,7 +40,7 @@ function HomePage() {
 
             {
                 loading ?
-                    <div style={{ display: "flex", justifyContent: "center", height: "100vh", alignItems: "center" }}> <ClipLoader color="#36d7b7" loading={loading} size={100} /> </div>
+                    <div style={{ display: "flex", justifyContent: "center", height: "100vh", alignItems: "center", flexDirection: "column" }}> <ClipLoader color="#36d7b7" loading={loading} size={80} /> <p>Loading apis...</p>  </div>
                     :
                     <>
                         {

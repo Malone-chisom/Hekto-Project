@@ -1419,14 +1419,16 @@ button.section-1-left-btn:hover {
         // border: 2px solid red;
     }
 
+    .section-1-left {
+        margin-top: 30px;
+    }
+
 
 
 }
 
 @media screen and (max-width: 425px) {
-    .section-1-left {
-        margin-top: 30px;
-    }
+
 
 
     .section-3-content {
