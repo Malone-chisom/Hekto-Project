@@ -25,7 +25,7 @@ import HomePage from "../HomePage"
 
 
 function Navbar({ isNavbarOpened }) {
-    const navRef = useRef();
+    const navRef = useRef(null);
     const navigate = useNavigate()
 
     // const shopContext = useContext(AppContext);
@@ -50,17 +50,17 @@ function Navbar({ isNavbarOpened }) {
     const { cartItems, count, setCount, handleOpenNavbar } = shopContext
     console.log("count", count)
 
-    // const handleDecreasedQuantity = () => {
-    //     if (count - 1) {
-    //         setCount(count - 1)
-    //     }
-    // }
+    const handleDecreasedQuantity = () => {
+        if (count - 1) {
+            setCount(count - 1)
+        }
+    }
 
-    // const handleIncreaseQuantity = () => {
-    //     if (count > 1) {
-    //         setCount(count + 1)
-    //     }
-    // }
+    const handleIncreaseQuantity = () => {
+        if (count > 1) {
+            setCount(count + 1)
+        }
+    }
 
     return (
         <div className="home container">
@@ -92,7 +92,7 @@ function Navbar({ isNavbarOpened }) {
                             </div> */}
                         </div>
                         <div className="navbar-top-right" ref={navRef}>
-                            <div className="display-small-screen">
+                            <div className="display-small-screen" >
                                 <li onClick={() => handleNavigate("home")}>Home </li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Product</a></li>
@@ -112,7 +112,7 @@ function Navbar({ isNavbarOpened }) {
                                     <AiOutlineHeart />
                                 </span>
                             </div>
-                            <div className="navbar-top-right-3">
+                            <div className="navbar-top-right-3"  >
                                 <span className="navbar-top-right-child" onClick={() => handleNavigate('cart')} style={{ position: "relative" }}>
                                     <BsCart />
                                     <span style={{ position: "absolute", top: "-7px" }}>{cartItems.length}</span>
@@ -129,7 +129,7 @@ function Navbar({ isNavbarOpened }) {
                         {/* <button className="nav-btn" onClick={handleOpenNavbar}> */}
                         <button className="nav-btn" onClick={() => {
                             showNavbar()
-                            handleOpenNavbar()
+                            // handleOpenNavbar()
                         }}>
                             {
                                 isNavbarOpened ? <MdCancel /> : <FaBars />
@@ -148,11 +148,11 @@ function Navbar({ isNavbarOpened }) {
 
                     </div>
                     <div className="navbar-bottom-2">
-                        <div className="navbar-menue-item" onClick={() => handleNavigate("home")}>Home</div>
-                        <div className="navbar-menue-item navbar-menue-item-left" > <span href="#products" >Products</span></div>
-                        <div className="navbar-menue-item navbar-menue-item-left">Shop</div>
-                        <div className="navbar-menue-item navbar-menue-item-left"> Services</div>
-                        <div className="navbar-menue-item navbar-menue-item-left">Contact</div>
+                        <a className="navbar-menue-item" href="#home">Home</a>
+                        <div className="navbar-menue-item navbar-menue-item-left" > <a href="#products" >Products</a></div>
+                        {/* <div className="navbar-menue-item navbar-menue-item-left"><a href="#latestproducts"></a>Shop</div> */}
+                        {/* <div className="navbar-menue-item navbar-menue-item-left"></div> */}
+                        <div className="navbar-menue-item navbar-menue-item-left" > <a href="#trending">Trending</a></div>
 
                     </div>
                     <div className="navbar-bottom-3">

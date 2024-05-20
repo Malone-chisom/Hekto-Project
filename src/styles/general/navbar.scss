@@ -212,6 +212,11 @@ ul {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 
 @media screen and (max-width: 1030px) {
@@ -233,15 +238,17 @@ ul {
 
     // .nav-btn {}
 
+
     .container .navbar-top-right {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
         transition: 1s;
         background-color: violet;
-        transform: translateY(-100%);
+        // display: none;
+        // transform: translateY(-100vh);
         z-index: 10;
         flex-direction: column;
         justify-content: flex-start;
@@ -249,12 +256,13 @@ ul {
         opacity: 1;
     }
 
-    .container .responsive_nav {
-        transform: none;
-        opacity: 1;
+    .responsive_nav {
+        transform: translateY(-100vh);
+
+
     }
 
-    .navbar-bottom {
+    .container .navbar-bottom {
         display: none;
     }
 }

@@ -30,6 +30,7 @@ import { AppContext } from "../../context/context";
 import axios from "axios";
 import FooterComponent from "../footer/Footer";
 import Swal from "sweetalert2";
+import Navbar from "../general/Navbar";
 
 
 function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
@@ -97,7 +98,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
         <div className="home">
 
             {/* Section-1/Hero starts  */}
-            <div className="section-1-container">
+            <div className="section-1-container" id="home">
                 <div className="padding-horizontal padding-vertical">
                     <div className="section-1">
                         <div className="section-1-left">
@@ -151,7 +152,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
             {/* Section-1/Hero ends  */}
 
             {/* Section-2/ Starts */}
-            <div className="section-2-container">
+            <div className="section-2-container" id="products">
                 <div className="padding-horizontal">
                     <div className="section-2">
                         <div className="section-heading">
@@ -272,21 +273,21 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
             {/* Section-2/ Ends */}
 
             {/* Section-3 Starts here */}
-            <div className="section-3-container" id="products">
+            <div className="section-3-container" >
                 <div className="padding-horizontal">
                     <div className="section-3">
                         <div>
                             <div className="section-heading">
-                                <span>
+                                <span id="latestproducts">
                                     Latest Porducts
                                 </span>
                             </div>
-                            <div className="section-3-links sub-section-headers">
+                            {/* <div className="section-3-links sub-section-headers">
                                 <div className="">New Arival</div>
                                 <div>Best Seller</div>
                                 <div>Featured</div>
                                 <div>Special offer</div>
-                            </div>
+                            </div> */}
                             <div className="section-3-content">
                                 <div className="overall-image-box-container">
                                     <div className="image-box-container">
@@ -429,12 +430,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                         </div>
                                     </div>
                                     <div className="section-4-padding-vertical">
-                                        <span>24/7 support</span>
+                                        <span> Quick delivery</span>
                                     </div>
                                     <div className="section-4-flex-center">
                                         <div className=" section-4-lorem">
                                             <span>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
+                                                Our Quick Delivery Service ensures you get what you need, when you need it.
                                             </span>
                                         </div>
                                     </div>
@@ -449,12 +450,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     </div>
 
                                     <div className="section-4-padding-vertical">
-                                        <span>24/7 support</span>
+                                        <span> Cash back</span>
                                     </div>
                                     <div className="section-4-flex-center">
                                         <div className="section-4-lorem">
                                             <span>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
+                                                Earn while you shop with our Cashback Rewards program! Every purchase
                                             </span>
                                         </div>
                                     </div>
@@ -468,12 +469,12 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                         </div>
                                     </div>
                                     <div className="section-4-padding-vertical">
-                                        <span>24/7 support</span>
+                                        <span>Premium quality</span>
                                     </div>
                                     <div className="section-4-flex-center">
                                         <div className="section-4-lorem" >
                                             <span>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
+                                                Earn while you shop with our Cashback Rewards program! Every purchase
                                             </span>
                                         </div>
                                     </div>
@@ -492,7 +493,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
                                     <div className="section-4-flex-center">
                                         <div className="section-4-lorem">
                                             <span>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
+                                                We're here for you, day and night. Our 24/7 Support team is always available
                                             </span>
                                         </div>
                                     </div>
@@ -549,7 +550,7 @@ function Home({ isHovered, handleMouseLeave, handleMouseEnter }) {
 
             {/* section 6 starts here */}
 
-            <div className="section-6-container">
+            <div className="section-6-container" id="trending">
                 <div className="padding-horizontal">
                     <div className="section-6">
                         <div className="section-6-heading">

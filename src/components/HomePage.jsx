@@ -4,12 +4,15 @@ import Navbar from "./general/Navbar";
 import { AppContext } from "../context/context";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
+import '../components/stylespage.css';
+
 
 
 function HomePage() {
     const shopContext = useContext(AppContext)
     const { isNavbarOpened, handleOpenNavbar, isHovered, setIsHovered, handleMouseLeave, handleMouseEnter, setProducts } = shopContext;
     const [loading, setLoading] = useState(false)
+
 
 
     useEffect(() => {
@@ -36,7 +39,7 @@ function HomePage() {
     // console.log("isNavbarOpened", isNavbarOpened)
 
     return (
-        <div >
+        <div className="">
 
             {
                 loading ?
@@ -48,13 +51,13 @@ function HomePage() {
 
                                 <>
                                     <Navbar handleOpenNavbar={handleOpenNavbar} />
-
-                                </>
-                                :
-                                <>
-                                    <Navbar isNavbarOpened={isNavbarOpened} handleOpenNavbar={handleOpenNavbar} />
                                     <Home isHovered={isHovered} handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} setIsHovered={setIsHovered} />
                                 </>
+                                :
+                                <div>
+                                    <Navbar isNavbarOpened={isNavbarOpened} handleOpenNavbar={handleOpenNavbar} />
+                                    <Home isHovered={isHovered} handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} setIsHovered={setIsHovered} />
+                                </div>
                         }
 
                     </>

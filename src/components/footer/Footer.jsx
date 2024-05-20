@@ -29,7 +29,7 @@ const FooterComponent = () => {
                         </div> */}
                         <p>
                             contact info <br />
-                            17, Princess Road, London Greater London NIV1 Uk
+                            60/1 Ahmadubello Railway Compound, Ebutemetta Lagos
                         </p>
                     </div>
                     <div className="footer-right footer-y">
